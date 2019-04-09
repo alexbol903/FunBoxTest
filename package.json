@@ -1,0 +1,50 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "Test Project for FunBox Company",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.build.config.js",
+    "dev": "webpack-dev-server --open --config ./config/webpack.dev.config.js",
+    "test": "./node_modules/.bin/mocha --require @babel/register ./src/js/tests/*.test.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "alexbol903",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "autoprefixer": "^9.4.10",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "copy-webpack-plugin": "^5.0.0",
+    "css-loader": "^2.1.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "mocha": "^6.1.1",
+    "nodemon": "^1.18.10",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "acorn": "^6.1.1",
+    "uniqid": "^5.0.3"
+  }
+}

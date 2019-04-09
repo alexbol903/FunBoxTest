@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<section class="section">
+        <!-- LEFT COLUMN FOR POINTS -->
+				<div class="column column--left">
+					<div class="points">
+						<div class="points__input-box">
+							<input
+								type="text"
+								id="pointsInput"
+								class="points__input"
+                placeholder="Новая точка в маршруте..."
+                autofocus
+							/>
+
+							<button type="button" id="pointsAddButton" class="points__button" disabled="true">
+								Добавить
+							</button>
+						</div>
+						<div class="points__items-list-box">
+							<div class="points__items-list">
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <!-- RIGHT COLUMN FOR MAP -->
+				<div class="column column--right">
+					<div id="map" class="map" tabindex="0"></div>
+				</div>
+			</section>
+		</header>
+
+		<script
+			src="https://api-maps.yandex.ru/2.1/?apikey=22022c68-4a72-4f9e-a600-7123c0769af0&lang=ru_RU"
+			type="text/javascript"
+		></script>
+	</body>
+</html>
