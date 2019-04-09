@@ -57,7 +57,6 @@ const addItem = () => {
   View.elements.inputText.focus();
   addPointMap(list.item);
   addScrollItem(list.element);
-  console.log(state.list.items);
 };
 
 const deleteItem = event => {
@@ -172,8 +171,6 @@ const moveItemUp = item => {
     state.list.moveUp(item.dataset.itemid);
     item.parentElement.insertBefore(item, previousItem).focus();
     uptateList();
-    console.log(state.list.items);
-
   }
 };
 
@@ -186,8 +183,6 @@ const moveItemDown = item => {
   }
   state.list.moveDown(item.dataset.itemid);
   uptateList();
-  console.log(state.list.items);
-
 };
 
 /**
