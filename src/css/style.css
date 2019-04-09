@@ -55,17 +55,6 @@ body {
 
 /* MEDIA QUERY MAX-WIDTH 688px */
 @media only screen and (max-width: 688px) {
-	.section {
-		width: 98%;
-		min-height: 98%;
-		height: 98%;
-  }
-  .column--left {
-    width: 40vw;
-  }
-  .column--right {
-    width: 60vw;
-  }
 	.points {
 		flex-direction: column;
 		align-items: center;
@@ -196,7 +185,7 @@ body {
 	background-color: #fdd633;
 	cursor: pointer;
 	outline: none;
-	transition: background-color 0.2s, border 0.2s;
+	transition: background-color 0.2s, border .2s;
 }
 
 .points__button:hover,
@@ -205,7 +194,7 @@ body {
 }
 
 .points__button:active {
-	background-color: #e4ba13;
+  background-color: #e4ba13;
 }
 
 /* ITEMS POINTS */
@@ -217,7 +206,7 @@ body {
 }
 
 .points__items-list {
-	position: relative;
+  position: relative;
 	width: 100%;
 	min-height: 100%;
 	padding-top: 10px;
@@ -246,7 +235,7 @@ body {
 	align-items: center;
 	padding: 3px 10px;
 	margin-bottom: 15px;
-	transition: background-color 0.2s;
+	transition: background-color .2s;
 	cursor: pointer;
 	outline: none;
 	z-index: 100;
@@ -270,19 +259,19 @@ body {
 }
 
 .item__count {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .item__text {
 	word-wrap: break-word;
 	max-width: 100%;
 	width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
 .item__text,
 .point-map__text {
-	user-select: none;
+  user-select: none;
 }
 
 .item__button--delete {
@@ -337,7 +326,7 @@ body {
 	width: 50px;
 	height: 50px;
 	background-color: #f7ffff;
-
+  
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -349,6 +338,7 @@ body {
 	z-index: 100;
 	cursor: pointer;
 	transition: background-color 0.2s;
+
 }
 
 .point-map__text {
@@ -363,12 +353,12 @@ body {
 }
 
 .balloon-content__text {
-	font-weight: bold;
-	font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .balloon-content__address {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 /*  PRELOADER */
@@ -435,12 +425,11 @@ body {
 
 /* Move elements */
 .move-up {
-	animation: move-up 0.1s cubic-bezier(0.6, 0, 0.33, 0.99) 0s 1 normal forwards;
+	animation: move-up .1s cubic-bezier(0.6, 0, 0.33, 0.99) 0s 1 normal forwards;
 }
 
 .move-down {
-	animation: move-down 0.1s cubic-bezier(0.6, 0, 0.33, 0.99) 0s 1 normal
-		forwards;
+	animation: move-down .1s cubic-bezier(0.6, 0, 0.33, 0.99) 0s 1 normal forwards;
 }
 
 @keyframes slide-up {
