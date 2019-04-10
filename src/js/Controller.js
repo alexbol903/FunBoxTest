@@ -95,9 +95,7 @@ const mouseDownItem = event => {
 
   if (!shiftKeyCode(event)) {
     document.onmouseup = mouseUpItem;
-    document.ontouchend = mouseUpItem;
     View.elements.itemsList.onmousemove = mouseMoveItem;
-    View.elements.itemsList.ontouchmove = mouseMoveItem;
   }
 };
 
@@ -116,9 +114,7 @@ const mouseUpItem = event => {
   }
   if (!shiftKeyCode(event)) {
     document.onmouseup = null;
-    document.ontouchend = null;
     View.elements.itemsList.onmousemove = null;
-    View.elements.itemsList.ontouchmove = null;
   }
 
   delete state.element;
@@ -308,7 +304,6 @@ View.elements.pointBox.addEventListener('keydown', event => {
 View.elements.itemsList.onclick = deleteItem;
 
 View.elements.itemsList.onmousedown = mouseDownItem;
-View.elements.itemsList.ontouchstart = mouseDownItem;
 
 View.elements.itemsList.onkeydown = event => {
   if (shiftKeyCode(event)) {
