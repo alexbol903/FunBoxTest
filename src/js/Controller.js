@@ -95,7 +95,9 @@ const mouseDownItem = event => {
 
   if (!shiftKeyCode(event)) {
     document.onmouseup = mouseUpItem;
+    document.ontouchend = mouseUpItem;
     View.elements.itemsList.onmousemove = mouseMoveItem;
+    View.elements.itemsList.ontouchmove = mouseMoveItem;
   }
 };
 
@@ -114,7 +116,9 @@ const mouseUpItem = event => {
   }
   if (!shiftKeyCode(event)) {
     document.onmouseup = null;
+    document.ontouchend = null;
     View.elements.itemsList.onmousemove = null;
+    View.elements.itemsList.ontouchmove = null;
   }
 
   delete state.element;
@@ -217,36 +221,6 @@ const moveScrollItem = clientY => {
 };
 
 /**
- * EVENTS
- */
-
-View.elements.pointsButton.onclick = addItem;
-View.elements.pointBox.addEventListener('keydown', event => {
-  if (event.keyCode !== 13) return;
-  addItem(event);
-});
-
-View.elements.itemsList.onclick = deleteItem;
-
-View.elements.itemsList.onmousedown = mouseDownItem;
-
-View.elements.itemsList.onkeydown = event => {
-  if (shiftKeyCode(event)) {
-    mouseDownItem(event);
-  } else if (event.keyCode === 38 || event.keyCode === 40) {
-    onKeydownItem(event);
-  }
-};
-
-View.elements.itemsList.onkeyup = event => {
-  if (!shiftKeyCode(event)) return;
-  mouseUpItem(event);
-};
-
-const shiftKeyCode = event => event.keyCode === 16;
-
-
-/**
  * POINTS
  */
 const addPointMap = item => {
@@ -320,3 +294,34 @@ const getAddressPoint = async (el, index) => {
   });
   return address;
 };
+
+/**
+ * EVENTS
+ */
+
+View.elements.pointsButton.onclick = addItem;
+View.elements.pointBox.addEventListener('keydown', event => {
+  if (event.keyCode !== 13) return;
+  addItem(event);
+});
+
+View.elements.itemsList.onclick = deleteItem;
+
+View.elements.itemsList.onmousedown = mouseDownItem;
+View.elements.itemsList.ontouchstart = mouseDownItem;
+
+View.elements.itemsList.onkeydown = event => {
+  if (shiftKeyCode(event)) {
+    mouseDownItem(event);
+  } else if (event.keyCode === 38 || event.keyCode === 40) {
+    onKeydownItem(event);
+  }
+};
+
+View.elements.itemsList.onkeyup = event => {
+  if (!shiftKeyCode(event)) return;
+  mouseUpItem(event);
+};
+
+const shiftKeyCode = event => event.keyCode === 16;
+
